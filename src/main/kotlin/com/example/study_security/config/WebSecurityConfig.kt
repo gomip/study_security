@@ -1,8 +1,8 @@
 package com.example.study_security.config
 
 import com.example.study_security.authentication.handler.CustomAuthenticationEntryPoint
-import com.example.study_security.user.domain.Member
-import com.example.study_security.user.service.MemberDetailService
+import com.example.study_security.api.user.domain.Member
+import com.example.study_security.api.user.service.MemberDetailService
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.Customizer
@@ -25,13 +25,6 @@ class WebSecurityConfig(
 
     @Bean
     fun filterChain(httpSecurity: HttpSecurity): SecurityFilterChain {
-
-//        val member = Member.of(
-//            "junghoon15@rsquare.co.kr",
-//            "12345"
-//        )
-//
-//        memberDetailService.createMember(member)
 
         httpSecurity
             .csrf { it.disable() }

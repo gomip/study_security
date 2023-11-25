@@ -1,4 +1,4 @@
-package com.example.study_security.user.domain
+package com.example.study_security.api.user.domain
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
